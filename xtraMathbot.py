@@ -14,6 +14,7 @@ import cv2
 from matplotlib import pyplot as plt
 
 
+#note that u have to run program 3 or 4 times after it is done and it shows ur progress and report on how many questions you got write and wrong exit out of it after and run code until it says u beat it
 PATH = "C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
 
@@ -148,8 +149,6 @@ for i in range(50):
     # cv2.imshow("inverted", inverted_img)
     # cv2.waitKey(0)
 
-    def grayscale(image):
-        return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     gray_image2 = grayscale(img2)
     cv2.imwrite('C:\\Users\\omp16\\Documents\\new_folder\\gray2.png', gray_image2)
@@ -163,29 +162,11 @@ for i in range(50):
     # cv2.imshow("black and white image", img_bw)
     # cv2.waitKey(0)
 
-    def noise_removal(image):
-        import numpy as np
-        kernel = np.ones((1, 1), np.uint8)
-        image = cv2.dilate(image, kernel, iterations=1)
-        kernel = np.ones((1, 1), np.uint8)
-        image = cv2.erode(image, kernel, iterations=1)
-        image  = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
-        image = cv2.medianBlur(image, 3)
-        return image
-
     no_noise2 = noise_removal(img2_bw)
     cv2.imwrite('C:\\Users\\omp16\\Documents\\new_folder\\no_noise2.png', no_noise2)
 
     # cv2.imshow("no noise", no_noise)
     # cv2.waitKey(0)
-
-    def thin_font(image):
-        import numpy as np
-        image = cv2.bitwise_not(image)
-        kernel = np.ones((2, 2), np.uint8)
-        image = cv2.erode(image, kernel, iterations=1)
-        image = cv2.bitwise_not(image)
-        return image
 
     eroded_img2 = thin_font(no_noise2)
     cv2.imwrite('C:\\Users\\omp16\\Documents\\new_folder\\eroded_img.png', eroded_img)
@@ -213,7 +194,6 @@ for i in range(50):
     
     if ocr2_string == 'f':
         ocr2_string = '7'
-    
     
 
     ocr2 = int(ocr2_string)
