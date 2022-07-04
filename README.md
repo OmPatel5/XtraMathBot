@@ -70,3 +70,7 @@ Then enter this command in terminal to install tesseract on your virtual environ
 ```sh 
    pip install pyautogui
    ```
+8. Install Pynput
+```sh
+   pip install pynput
+   ```
