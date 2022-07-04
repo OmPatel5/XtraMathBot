@@ -43,11 +43,13 @@ This program is built with the following languages:
    pip install selenium
    ```
 3. Install Chrome WebDriver
+
 **Install Chrome Webdriver asociated with the version of your chrome you are using**
 ```sh
    https://sites.google.com/a/chromium.org/chromedriver/downloads
    ```
 4. Install Tesseract-OCR
+
 **Install Tesseract-OCR with associated windows version**
 ```sh
    https://github.com/UB-Mannheim/tesseract/wiki
