@@ -79,4 +79,5 @@ Install Pynput
    ```
 # Contact <a name="contact"></a>
 Om Patel - omp091216@gmail.com
-Project Link: https://github.com/OmPatel5/XtraMathBotAdding(https://github.com/OmPatel5/XtraMathBotAdding)
+
+Project Link: 
