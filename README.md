@@ -52,3 +52,6 @@ This program is built with the following languages:
 ```sh
    https://github.com/UB-Mannheim/tesseract/wiki
    ```
+```sh
+   pip install pytesseract
+   ```
