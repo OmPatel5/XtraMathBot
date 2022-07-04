@@ -53,7 +53,8 @@ This program is built with the following languages:
 **Install Tesseract-OCR with associated windows version**
 ```sh
    https://github.com/UB-Mannheim/tesseract/wiki
-   ```
+```
+
 ```sh
    pip install pytesseract
    ```
