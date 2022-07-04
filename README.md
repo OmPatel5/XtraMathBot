@@ -29,3 +29,8 @@ Keep the code running until it says you have completed your program.
 ## Built With <a name="builtwith"></a>
 This program is built with the following languages:
 * Python
+
+# Getting Started <a name="gettingstarted"></a>
+**To get this project running follow these steps**
+
+## Installation <a name="installation"></a>
