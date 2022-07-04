@@ -1,5 +1,12 @@
 # XtraMathBot
-xtra math bot (only for adding)
+
+# Table of contents
+1. [About](#about)
+    * [Built With](#builtwith)
+2. [Getting Started](#gettingstarted)
+    * [Installation](#installation) 
+
+# About <a name="about"></a>
 
 This is my xtra math bot for adding. First it logs in with selenium, a module which can minipulate key presses and mouse clicks. 
 After it logs in your account and gets to the questions, it takes 2 screenshots (the first number and bottom number) and takes a screen shot of them and saves it in the 
