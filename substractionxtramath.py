@@ -65,7 +65,7 @@ for i in range(200):
 
     pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
-    img = cv2.imread(r'C:\Users\omp16\Documents\Python Projects\XtraMath\topno.png')
+    img = cv2.imread(r"C:\\Users\\omp16\\Documents\\Python Projects\\XtraMath\\topno.png")
     img = cv2.resize(img,(0,0),fx=2,fy=2)
     img = cv2.GaussianBlur(img,(11,11),0)
     img = cv2.medianBlur(img,9)
@@ -85,14 +85,14 @@ for i in range(200):
    
     #IMAGE 2
 
-    screenshot = pyautogui.screenshot(region=(800,465,400,180))
+    screenshot = pyautogui.screenshot(region=(900,465,200,150))
     screenshot.save(r'C:\Users\omp16\Documents\Python Projects\XtraMath\bottomno.png')
 
     # this is screenshot number 2 (bottom No.)
 
     pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
-    img2 = cv2.imread(r'C:\Users\omp16\Documents\Python Projects\XtraMath\bottomno.png')
+    img2 = cv2.imread(r"C:\\Users\omp16\\Documents\\Python Projects\\XtraMath\\bottomno.png")
 
     img2 = cv2.resize(img2,(0,0),fx=2,fy=2)
     img2 = cv2.GaussianBlur(img2,(11,11),0)
@@ -100,25 +100,40 @@ for i in range(200):
 
     img2 = Image.fromarray(img2)
     ocr2 = pytesseract.image_to_string(img2, lang='eng', config='--psm 8-c tessedit_char_whitelist=0123456789')
-    if ocr2 != '+5\n':
+    if ocr2 != '5\n':
         ocr2 = pytesseract.image_to_string(img2, lang='eng', config='--psm 7-c tessedit_char_whitelist=0123456789')
-        ocr2.strip(' +')
+        ocr2.strip(' ')
     else:
         ocr2 = '5'
     ocr2 = ocr2.strip(' +')
     ocr2_split = ocr2.split()
     ocr2_string = ocr2_split[0]
+
+    print(ocr2_string)
+    print(ocr2_split)
     
     if ocr2_string == 'O':
+        ocr2_string = '0'
+    
+    if ocr2_string == 'Tf':
+        ocr2_string = '7'
+
+    if ocr2_string == '/':
+        ocr2_string = '7'
+
+    if ocr2_string == 'Q':
         ocr2_string = '0'
     
     if ocr2_string == 'f':
         ocr2_string = '7'
     
+    
+    
+
 
     ocr2 = int(ocr2_string)
     
-    result = ocr1 + ocr2
+    result = ocr1 - ocr2
     
     new_result = str(result)
     

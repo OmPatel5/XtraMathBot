@@ -56,69 +56,83 @@ for i in range(2):
         keyboard.release(Key.enter)
 
 time.sleep(4)
-for i in range(200):
-    time.sleep(0.48)
-    screenshot = pyautogui.screenshot(region=(700,320,400,160))
-    screenshot.save(r'C:\Users\omp16\Documents\Python Projects\XtraMath\topno.png')
-
-    # this is screenshot number 1 (top No.)
-
-    pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
-
-    img = cv2.imread(r'C:\Users\omp16\Documents\Python Projects\XtraMath\topno.png')
-    img = cv2.resize(img,(0,0),fx=2,fy=2)
-    img = cv2.GaussianBlur(img,(11,11),0)
-    img = cv2.medianBlur(img,9)
+for i in range(100):
+    time.sleep(0.48) 
     
-
-    ocr1 = pytesseract.image_to_string(img, lang='eng', config='--psm 6-c tessedit_char_whitelist=0123456789')    
-    print(ocr1)
-    ocr1_split = ocr1.split()
-    print(ocr1_split)
-    ocr1_string = ocr1_split[0]
-    if ocr1_string == 'O':
-        ocr1_string = '0'
-    print(ocr1_string)
-    ocr1 = int(ocr1_string) 
-    
-        
-   
     #IMAGE 2
 
-    screenshot = pyautogui.screenshot(region=(800,465,400,180))
+    screenshot = pyautogui.screenshot(region=(800,465,400,150))
     screenshot.save(r'C:\Users\omp16\Documents\Python Projects\XtraMath\bottomno.png')
 
     # this is screenshot number 2 (bottom No.)
 
     pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
-    img2 = cv2.imread(r'C:\Users\omp16\Documents\Python Projects\XtraMath\bottomno.png')
+    img2 = cv2.imread(r"C:\\Users\omp16\\Documents\\Python Projects\\XtraMath\\bottomno.png")
 
     img2 = cv2.resize(img2,(0,0),fx=2,fy=2)
     img2 = cv2.GaussianBlur(img2,(11,11),0)
     img2 = cv2.medianBlur(img2,9)
 
     img2 = Image.fromarray(img2)
-    ocr2 = pytesseract.image_to_string(img2, lang='eng', config='--psm 8-c tessedit_char_whitelist=0123456789')
-    if ocr2 != '+5\n':
-        ocr2 = pytesseract.image_to_string(img2, lang='eng', config='--psm 7-c tessedit_char_whitelist=0123456789')
-        ocr2.strip(' +')
-    else:
-        ocr2 = '5'
-    ocr2 = ocr2.strip(' +')
-    ocr2_split = ocr2.split()
-    ocr2_string = ocr2_split[0]
+    ocr = pytesseract.image_to_string(img2, lang='eng', config='--psm 7-c tessedit_char_whitelist=0123456789')
+    print(ocr)
+    ocr_split = ocr.split(")")
+    print(ocr_split)
+    ocr1_string = ocr_split[0]
+    ocr2_split = ocr_split[1]
+    ocr2_strip = ocr2_split.strip('\n')
+    ocr2_string = ocr2_strip.strip()
+
+
+    print(ocr1_string)
+
+    print(ocr2_string)
+    print(ocr2_split)
     
     if ocr2_string == 'O':
+        ocr2_string = '0'
+    
+    if ocr2_string == 'Tf':
+        ocr2_string = '7'
+
+    if ocr2_string == '/':
+        ocr2_string = '7'
+
+    if ocr2_string == 'Q':
         ocr2_string = '0'
     
     if ocr2_string == 'f':
         ocr2_string = '7'
     
-
-    ocr2 = int(ocr2_string)
+    if ocr1_string == 'O':
+        ocr1_string = '0'
     
-    result = ocr1 + ocr2
+    if ocr1_string == 'Tf':
+        ocr1_string = '7'
+
+    if ocr1_string == '/':
+        ocr1_string = '7'
+
+    if ocr1_string == 'Q':
+        ocr1_string = '0'
+    
+    if ocr1_string == 'f':
+        ocr1_string = '7'
+    
+    if open(r"C:\\Users\omp16\\Documents\\Python Projects\\XtraMath\\bottomno.png","rb").read() == open(r"C:\\Users\omp16\\Documents\\Python Projects\\XtraMath\\1.png","rb").read():
+        ocr1_string = 1
+        ocr2_string = 1
+
+    ocr1 = int(ocr1_string)
+    ocr2 = int(ocr2_string)
+
+    
+
+    if ocr1 == 0 or ocr2 == 0:
+        result = 0
+    else:
+        result = ocr2 / ocr1
     
     new_result = str(result)
     
