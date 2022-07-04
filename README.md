@@ -58,19 +58,21 @@ Then enter this command in terminal to install tesseract on your virtual environ
 ```sh
    pip install pytesseract
    ```
-5. Install Pillow
+5. Install the following packages:
+
+Install Pillow
 ```sh
    pip install Pillow
    ```
-6. Install OpenCV
+Install OpenCV
 ```sh
    pip install opencv-python
    ```
-7. Install Pyautogui
+Install Pyautogui
 ```sh 
    pip install pyautogui
    ```
-8. Install Pynput
+Install Pynput
 ```sh
    pip install pynput
    ```
