@@ -18,6 +18,9 @@ First, the bot logs in with selenium, a module which can minipulate key presses 
 
 ## Answering the Questions
 
+https://user-images.githubusercontent.com/104532194/177197161-88699143-3b9f-4086-b7ab-b015625a995f.mp4
+#### Video 2: Answering the Questions
+
 After the logging in phase is completed, it moves on to the answering questions phase. First, it takes 2 or 1 screenshot(s) (the top and bottom number or the whole area where the questions are in) and saves them in the path you specified. Next it uses 2 modules, pytesseract and openCV, to process and read the numbers and turn them into 
 python strings. After that, the code turns the numbers into integers and it adds/subtracts/multiplies/divides them and stores it as the result. Finally, the program  types in the answer with keyboard automation using pyautogui. 
 
