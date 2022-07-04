@@ -37,7 +37,7 @@ This program is built with the following languages:
 ## Installation <a name="installation"></a>
 1. Clone the Repository
 ```sh
-   git clone https://github.com/OmPatel5/XtraMathBotAdding.git
+   git clone https://github.com/OmPatel5/XtraMathBot.git
    ```
 2. Install Selenium
 ```sh
