@@ -11,8 +11,11 @@
 This is my xtra math bot I made using Slenium, Pytesseract, and OpenCV. There are 2 parts to this project: Logging in and Answering Questions
 
 ## Logging In
+https://user-images.githubusercontent.com/104532194/177196100-d5f5c637-9088-4689-b545-4b1f3189c3be.mp4
+
 
 First, the bot logs in with selenium, a module which can minipulate key presses and mouse clicks. The bot enters your email, student name, and pin code into the text boxes and presses enter, continuing onto the questions phase. 
+
 
 
 After it logs in your account and gets to the questions, it takes 2 screenshots (the first number and bottom number) and takes a screen shot of them and saves it in the 
