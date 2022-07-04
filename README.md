@@ -54,7 +54,19 @@ This program is built with the following languages:
 ```sh
    https://github.com/UB-Mannheim/tesseract/wiki
 ```
-Then enter this command in terminal to install on your virtual environment:
+Then enter this command in terminal to install tesseract on your virtual environment:
 ```sh
    pip install pytesseract
+   ```
+5. Install Pillow
+```sh
+   pip install Pillow
+   ```
+6. Install OpenCV
+```sh
+   pip install opencv-python
+   ```
+7. Install Pyautogui
+```sh 
+   pip install pyautogui
    ```
