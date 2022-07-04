@@ -1,4 +1,4 @@
-# XtraMathBotAdding
+# XtraMathBot
 xtra math bot (only for adding)
 
 This is my xtra math bot for adding. First it logs in with selenium, a module which can minipulate key presses and mouse clicks. 
