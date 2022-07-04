@@ -5,6 +5,7 @@
     * [Built With](#builtwith)
 2. [Getting Started](#gettingstarted)
     * [Installation](#installation) 
+3. [Contact](#contact)
 
 # About <a name="about"></a>
 
@@ -76,3 +77,6 @@ Install Pynput
 ```sh
    pip install pynput
    ```
+# Contact <a name="contact"></a>
+Om Patel - omp091216@gmail.com
+Project Link: https://github.com/OmPatel5/XtraMathBotAdding(https://github.com/OmPatel5/XtraMathBotAdding)
