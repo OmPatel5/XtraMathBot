@@ -34,3 +34,4 @@ This program is built with the following languages:
 **To get this project running follow these steps**
 
 ## Installation <a name="installation"></a>
+1. Clone the Repository\
